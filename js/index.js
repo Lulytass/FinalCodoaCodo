@@ -6,6 +6,7 @@ const { createApp } = Vue
             usuarios:[],
             url:'https://luciatassi.pythonanywhere.com/usuarios',
             error:false,
+            nombre:"",
             email:"",
             id:0,
             password:"",
@@ -36,14 +37,13 @@ const { createApp } = Vue
 
             // Convertir a minúsculas para comparación sin importar mayúsculas/minúsculas
             const emailLowerCase = this.email.toLowerCase();
-            const passwordLowerCase = this.password.toLowerCase();
 
             // variable para indicar si se encontró una coincidencia
             let found = false;
 
             // Iterar sobre los usuarios hasta encontrar una coincidencia
             for (const usuario of this.usuarios){
-                if (usuario.email.toLowerCase() === emailLowerCase && usuario.contrasenia.toLowerCase() === passwordLowerCase) {
+                if (usuario.email.toLowerCase() === emailLowerCase && usuario.contrasenia === this.password) {
                     found = true;
                     break;  // Detener el bucle cuando se encuentra una coincidencia
                 }

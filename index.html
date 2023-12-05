@@ -38,7 +38,7 @@
         
 
         <!-- Modal de recuperación de contraseña -->
-        <div class="modal fade" id="recuperarModal" tabindex="-1" aria-labelledby="recuperarModalLabel" aria-hidden="true">
+        <div class="modal" id="recuperarModal" tabindex="-1" aria-labelledby="recuperarModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -72,7 +72,7 @@
         </div>
 
         <!-- Modal para ingresar una nueva contraseña -->
-        <div class="modal fade" id="nuevaContraseñaModal" tabindex="-1" aria-labelledby="nuevaContraseñaModalLabel" aria-hidden="true">
+        <div class="modal" id="nuevaContraseñaModal" tabindex="-1" aria-labelledby="nuevaContraseñaModalLabel" aria-hidden="true">
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
@@ -82,6 +82,7 @@
                   <div class="modal-body">
                       <!-- Contenido del formulario para ingresar nueva contraseña -->
                       <form>
+                        <p class="text-info">Luego de cambiar la contraseña se recargara la pagina para que inicie sesión</p>
                           <div class="mb-3">
                               <label for="nuevaContraseña" class="form-label">Nueva Contraseña</label>
                               <input type="password" class="form-control" id="nuevaContraseña" autocomplete="new-password" v-model="password">
