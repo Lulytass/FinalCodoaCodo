@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>CRUD Biblioteca</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <header id="header">
+  </header>
+  <main>
+      <div id="app">
+        <!-- formulario para el login -->
+        <form class="login">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="email" v-model="email">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" autocomplete="current-password" v-model="password">
+          </div>
+          <button type="button" class="btn btn-primary" @click="login()">Entrar</button>
+          <br>
+          <!-- Enlace para abrir el modal -->
+          <a href="#" data-bs-toggle="modal" data-bs-target="#recuperarModal">Recuperar contraseña</a>
+        </form>
+        <br>
+        
+
+        <!-- Modal de recuperación de contraseña -->
+        <div class="modal fade" id="recuperarModal" tabindex="-1" aria-labelledby="recuperarModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="recuperarModalLabel">Recuperar Contraseña</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <!-- Contenido del formulario de recuperación -->
+                <form>
+                  <div class="mb-3">
+                    <label for="emailRecuperar" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailRecuperar" v-model="email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="preguntaRecuperar" class="form-label">Pregunta</label>
+                    <select id="preguntaRecuperar" v-model="pregunta" class="form-select" aria-label="Default select example">
+                      <option value="mascota">Cual es el nombre de tu mascota?</option>
+                      <option value="color">Cual es tu color favorito?</option>
+                      <option value="comida">Cual es tu comida favorita?</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="respuestaRecuperar" class="form-label">Respuesta</label>
+                    <input type="text" class="form-control" id="respuestaRecuperar" v-model="respuesta">
+                  </div>
+                  <button type="button" class="btn btn-primary" @click="recuperarContraseña()">Recuperar Contraseña</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal para ingresar una nueva contraseña -->
+        <div class="modal fade" id="nuevaContraseñaModal" tabindex="-1" aria-labelledby="nuevaContraseñaModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="nuevaContraseñaModalLabel">Nueva Contraseña</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- Contenido del formulario para ingresar nueva contraseña -->
+                      <form>
+                          <div class="mb-3">
+                              <label for="nuevaContraseña" class="form-label">Nueva Contraseña</label>
+                              <input type="password" class="form-control" id="nuevaContraseña" autocomplete="new-password" v-model="password">
+                          </div>
+                          <div class="mb-3">
+                              <label for="confirmarNuevaContraseña" class="form-label">Confirmar Nueva Contraseña</label>
+                              <input type="password" class="form-control" id="confirmarNuevaContraseña" autocomplete="new-password" v-model="confirmarPassword">
+                          </div>
+                          <button type="button" class="btn btn-primary" @click="guardarNuevaContraseña()">Guardar Contraseña</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

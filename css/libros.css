@@ -1,0 +1,14 @@
+a img{
+    width: 100%;
+}
+
+/* ESTRELLAS PUNTAJE */
+
+#estrellas{
+    align-content: center;
+    margin-left: 10px;
+}
+
+.checked{
+    color:yellow
+}
