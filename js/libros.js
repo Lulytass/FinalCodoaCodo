@@ -45,6 +45,11 @@ const { createApp } = Vue
         }
         ,
         crearRegistro(){
+          // Verificar campos vacíos
+            if (!this.nombre || !this.editorial || !this.imagen || !this.escritor || !this.genero || !this.libro || !this.resumen) {
+                alert("Por favor, complete todos los campos.");
+                return;
+            }
             let libro = {
                 nombre: this.nombre, 
                 imagen: this.imagen,
