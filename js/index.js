@@ -89,7 +89,7 @@ const { createApp } = Vue
                 let modalNuevaContraseña = new bootstrap.Modal(document.getElementById('nuevaContraseñaModal'));
                 modalNuevaContraseña.show();           
             }else{
-                alert('Los datos ingreados no son correctos');
+                alert('Los datos ingresados no son correctos');
                 window.location.href = "./index.html";
             }
 
