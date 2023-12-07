@@ -9,7 +9,7 @@ document.getElementById("header").innerHTML= `
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://bibliotecavirtualcodoacodo.netlify.app/" Target="_blank">Web Biblioteca</a>
+                    <a class="nav-link" href="https://biblioteca-cliente.netlify.app/" Target="_blank">Web Biblioteca</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
